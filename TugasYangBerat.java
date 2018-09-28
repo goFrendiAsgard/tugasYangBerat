@@ -5,10 +5,8 @@ class Orang {
 public class TugasYangBerat {
     static Orang terdepan;
     public static void main(String[] args) {
-        terdepan = new Orang();
-        terdepan.name = "Bima";
-        terdepan.next = new Orang();
-        terdepan.next.name = "Bimo";
+        addFirst("Bima");
+        addFirst("Bimo");
         removeFirst();
         addFirst("Ana");
         removeLast();
@@ -36,7 +34,12 @@ public class TugasYangBerat {
         terdepan = terdepan.next;
     }
 
-    public static void addLast(String nama) {}
-    public static void removeLast() {}
+    public static void addLast(String nama) {
+        // TODO: Lengkapi method ini
+    }
+
+    public static void removeLast() {
+        // TODO: Lengkapi method ini
+    }
 
 }
