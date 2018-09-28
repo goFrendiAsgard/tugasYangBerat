@@ -2,6 +2,7 @@ class Orang {
     public String name;
     public Orang next;
 }
+
 public class TugasYangBerat {
     static Orang terdepan;
     public static void main(String[] args) {
@@ -24,22 +25,48 @@ public class TugasYangBerat {
     }
 
     public static void addFirst(String nama) {
-        Orang orang = new Orang();
-        orang.name = nama;
-        orang.next = terdepan;
-        terdepan = orang;
+        Orang orangBaru = new Orang();
+        orangBaru.name = nama;
+        orangBaru.next = terdepan;
+        terdepan = orangBaru;
     }
 
     public static void removeFirst() {
-        terdepan = terdepan.next;
+        if (terdepan != null) {
+            if (terdepan.next == null) {
+                terdepan = null;
+            } else {
+                terdepan = terdepan.next;
+            }
+        }
     }
 
     public static void addLast(String nama) {
-        // TODO: Lengkapi method ini
+        Orang orangBaru = new Orang();
+        orangBaru.name = nama;
+        if (terdepan == null) {
+            terdepan = orangBaru;
+        } else {
+            Orang orang = terdepan;
+            while (orang.next != null) {
+                orang = orang.next;
+            }
+            orang.next = orangBaru;
+        }
     }
 
     public static void removeLast() {
-        // TODO: Lengkapi method ini
+        if (terdepan != null) {
+            if (terdepan.next == null) {
+                terdepan = null;
+            } else {
+                Orang orang = terdepan;
+                while (orang.next.next != null) {
+                    orang = orang.next;
+                }
+                orang.next = null;
+            }
+        }
     }
 
 }
