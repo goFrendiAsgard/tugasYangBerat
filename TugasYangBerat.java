@@ -33,11 +33,7 @@ public class TugasYangBerat {
 
     public static void removeFirst() {
         if (terdepan != null) {
-            if (terdepan.next == null) {
-                terdepan = null;
-            } else {
-                terdepan = terdepan.next;
-            }
+            terdepan = terdepan.next;
         }
     }
 
