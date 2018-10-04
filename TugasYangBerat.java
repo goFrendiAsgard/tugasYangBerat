@@ -12,7 +12,7 @@ public class TugasYangBerat {
         addLast("Donna");
         removeLast();
         removeFirst();
-        addFirst("Edelyn");
+        addLast("Edelyn");
         show(); // Betty Cindy Edelyn
         addAfter("Betty", "Chika");
         show(); // Betty Chika Cindy Edelyn
@@ -30,11 +30,26 @@ public class TugasYangBerat {
     }
 
     public static void addAfter(String nama, String namaBaru) {
-        // TODO: complete this
+        Orang orangBaru = new Orang();
+        orangBaru.name = namaBaru;
+        Orang orang = terdepan;
+        while(orang != null && orang.name != nama) {
+            orang = orang.next;
+        }
+        if (orang != null) {
+            orangBaru.next = orang.next;
+            orang.next = orangBaru;
+        }
     }
 
     public static void removeAfter(String nama) {
-        // TODO: complete this
+        Orang orang = terdepan;
+        while(orang != null && orang.name != nama) {
+            orang = orang.next;
+        }
+        if (orang != null && orang.next != null) {
+            orang.next = orang.next.next;
+        }
     }
 
     public static void addFirst(String nama) {
