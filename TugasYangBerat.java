@@ -6,13 +6,18 @@ class Orang {
 public class TugasYangBerat {
     static Orang terdepan;
     public static void main(String[] args) {
-        addFirst("Bima");
-        addFirst("Bimo");
-        removeFirst();
-        addFirst("Ana");
+        addFirst("Betty");
+        addFirst("Amanda");
+        addLast("Cindy");
+        addLast("Donna");
         removeLast();
-        addLast("Chika");
-        show(); // Ana Chika
+        removeFirst();
+        addFirst("Edelyn");
+        show(); // Betty Cindy Edelyn
+        addAfter("Betty", "Chika");
+        show(); // Betty Chika Cindy Edelyn
+        removeAfter("Chika");
+        show(); // Betty Chika Edelyn
     }
 
     public static void show() {
@@ -22,6 +27,14 @@ public class TugasYangBerat {
             orang = orang.next;
         }
         System.out.println();
+    }
+
+    public static void addAfter(String nama, String namaBaru) {
+        // TODO: complete this
+    }
+
+    public static void removeAfter(String nama) {
+        // TODO: complete this
     }
 
     public static void addFirst(String nama) {
