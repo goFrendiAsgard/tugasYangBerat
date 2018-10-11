@@ -12,7 +12,7 @@ public class TugasYangBerat {
         addLast("Donna");
         removeLast();
         removeFirst();
-        addFirst("Edelyn");
+        addLast("Edelyn");
         show(); // Betty Cindy Edelyn
         addAfter("Betty", "Chika");
         show(); // Betty Chika Cindy Edelyn
